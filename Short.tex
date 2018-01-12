@@ -36,17 +36,19 @@ Penn State University
 
 
 \begin{abstract}
-\noindent Here we give a short proof of a result obtained by Mohammad Ghomi concerning existence of nets of a convex polyhedron after a suitable linear transformation.
+\noindent We give a short proof of a result obtained by Mohammad Ghomi concerning existence of nets of a convex polyhedron after a suitable linear transformation.
 
 \end{abstract}
 
+\section{Introduction}
 
+A \emph{net of polyhedron} is arrangement of edge-joined polygons in the plane which can be folded along edges to become the faces of the polyhedron.
 
+The first known record of this procedure is the renaissance book \textit{The Painter's Manual} by Albert Durer \cite{Du}.
+In this book, Durer shows how to cut and develop some figures, including all five regular polyhedra. 
 
-Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton, we obtain a compact surface $P_T$, which is homeomorphic to a closed disc. Since $P_T$ does not have any cycles, once we map isometrically one face into $\R^2$, there is a unique way of mapping (unfolding) its complement face by face in such a way that when two faces share an edge not in $T$, then their images share the corresponding edge, and consecutive faces do not overlap. We are going to denote this map as $f_T$. This map restricted to the interior of $P_T$ is an isometric immersion into the plane. However, $f_T$ does not have to be injective (see figure \ref{Tet}). If it is, then we say it is a \textit{net} of $P$.
-
-
-
+In 1975 Geoffrey Shephard \cite{Sh} posed the problem to determine whether all convex polyhedra have a net.
+Let us discuss this problem in more details.
 
 \begin{figure}[h]
 \centering
@@ -54,34 +56,36 @@ Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton,
 \caption{Cutting a thin truncated equilateral pyramid along the red line (left) generates an unfolding with self overlaps (right).}\label{Tet}
 \end{figure}
 
+To obtain a net one has to cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton.
+This way we obtain a flat surface $P_T$, which is homeomorphic to a closed disc.
+The surface $P_T$ can be mapped isometrically one face into the plane
+in an essentially unique way; denote this map by $f_T\colon P_T\to \mathbb{R}^2$.
+If $f_T$ is injective then the image $f_T(P_T)$ is a net of $P$.
+However $f_T$ might be not injective as you can see figure \ref{Tet}.
+Therefore Shephard's problem is asking if for any convex polyhedron $P$ there is a spanning tree $T$ such that $f_T$ is injective.
 
 
-
-
-
-
-
-
-
-
-G.C. Shephard \cite{Sh} posed in 1975 the problem to determine whether all convex polyhedra have a net. The first known record of this procedure is the renaissance book \textit{The Painter's Manual} by Albert Durer \cite{Du}. In this book, Durer shows how to cut and develop some figures, including all five regular polyhedra. By that reason, Mohammad Ghomi \cite{Gh} calls it the Durer's problem.
-
-Experimental results do not give us enough information to expect a positive or negative answer to the problem. However, M. Ghomi solved a similar problem, which is to develop any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below). In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
+Recently Mohammad  Ghomi proved existence of for any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below).
+In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
 
 \begin{teorema}\label{Str}
 {\rm Let $P$ be a convex polyhedron, then there is a linear stretching $L$, such that $L(P)$ has a net.}
 \end{teorema}
 
+In this note we give a short and elementary proof of his result.
+
+\section{The proofs}
 
 
-Let $\xi \in \mathbb{S}^2$ be a direction not orthogonal to any line determined by two vertices of $P$. Applying a rotation $O \in SO(3)$ sending $\xi $ to $e_1 $, we obtain a polyhedron $O(P)$ such that no edge is orthogonal to $e_1$. Therefore, after a suitable stretching in the direction of the $x$ axis, all the edges of the obtained polyhedron $P^{\prime}$  form an angle of less than $\frac{\pi}{20 N}$ with $e_1$, where $N$ is the number of edges of $P$.
+Let $\xi \in \mathbb{S}^2$ be a direction not orthogonal to any line determined by two vertices of $P$. Applying a rotation $O \in SO(3)$ sending $\xi $ to $e_1 $, we obtain a polyhedron $O(P)$ such that no edge is orthogonal to $e_1$. Therefore, after a suitable stretching in the direction of the $x$ axis, all the edges of the obtained polyhedron $P^{\prime}$  form a sufficiently angle of with $e_1$ (less than $\frac{\pi}{20 N}$ will do, where $N$ is the number of edges of $P$).
 
 
 We now define an ordering on the set of vertices of $P^{\prime}$. We say that $v \leq v^{\prime}$ if the first coordinate of $v$ is less or equal than the first coordinate of $v^{\prime}$. We will denote by $y$ and $z$ the minimal and maximal vertices respectively.
 
 We define an \textit{ascending sequence} as a set of vertices $\{ p_0, p_1, \ldots , p_n   \}$ such that $p_i \leq p_{i+1}$ and $p_i p_{i+1}$ are connected by an edge for all $i \in \{ 0,1, \ldots, n-1 \} $. Descending sequences are defined similarly. We say that a spanning tree $T$ with root $z$ is \textit{increasing} if for any vertex $v\in P^{\prime}$ there is a (unique) ascending sequence from $v$ to $z$ contained in $T$. 
 
-Note that all leaves of an increasing tree form an angle close to $\pi$ with $e_1$. Otherwise, the path joining the corresponding leaf to $z$ wouldn't be an ascending sequence (see figure \ref{Mon}). Also, all the ends of the surface $P^{\prime} \backslash T$ point in the direction of the $x$ axis.
+Note that all leaves of an increasing tree form an angle close to $\pi$ with~$e_1$. %???I did not get it???
+Otherwise, the path joining the corresponding leaf to $z$ wouldn't be an ascending sequence (see figure \ref{Mon}). Also, all the ends of the surface $P^{\prime} \backslash T$ point in the direction of the $x$ axis.
 
 
 
@@ -99,7 +103,7 @@ In what follows, we give a proof of theorem \ref{Gho} below, which clearly impli
 
 
 \begin{teorema}\label{Gho}
-{\rm \textbf{(Ghomi)} If $P^{\prime}$ is cut along any increasing tree $T$, then it can be unfolded without overlapping in $\R ^2$.}
+{\rm \textbf{(Ghomi)} If $P^{\prime}$ is cut along any increasing tree $T$, then the unfolding map $f_T$ is injective.}
 \end{teorema}
 
 
@@ -149,14 +153,17 @@ $arg(u_m - v_m) \in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$.
 
 
 \begin{rem}
-{\rm One can observe from figure \ref{Tet} that this lemma does not hold if the condition $arg(u_{j }- u_{j-1}), arg(v_j - v_{j-1} )  \in \left( -\frac{\pi}{10},\frac{\pi}{10} \right)$ for $j \in \{ 1, 2, \ldots , m\} $ is omitted. Here is where we use the stretching. 
+{\rm One can observe from figure \ref{Tet} that this lemma does not hold if the condition $arg(u_{j }- u_{j-1}), arg(v_j - v_{j-1} )  \in \left( -\frac{\pi}{10},\frac{\pi}{10} \right)$ for $j \in \{ 1, 2, \ldots , m\} $ is omitted. 
+To meet this condition we will apply the stretching. 
 }
 \end{rem}
 
 
 
 
-\textbf{Proof of the Lemma: }We will prove this lemma by induction on $m$. The case $m=1$ is elementary plane geometry.
+\textbf{Proof of the Lemma:}
+We will prove this lemma by induction on $m$.
+The base case $m=1$ is evident.
 
 
 Suppose it holds for $m=\nu$ and take $m = \nu +1$. Construct another sequence $\{ w_1, w_2, \ldots, w_m   \}$ such that $w_1 = v_1$ and $u_{j+1}u_jw_jw_{j+1} $ is a parallelogram for $j \in \{ 1, 2, \ldots , m-1\} $. Applying the induction hypothesis to $\{ w_1, w_2, \ldots w_m   \}$ and $\{v_1, v_2, \ldots, v_m  \}$, we see that they do not cross and $arg( w_{m} - v_m) \in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$. Also, $arg(u_m - w_m )= arg (u_1 - w_1) = arg (u_1 - v_1) \in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$, which implies $arg(u_m - v_m)\in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$.
