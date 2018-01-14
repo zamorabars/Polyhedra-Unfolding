@@ -41,6 +41,7 @@ Penn State University
 \end{abstract}
 
 
+\section*{Discussion}
 
 
 Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton, we obtain a compact surface $P_T$, which is homeomorphic to a closed disc. Since $P_T$ does not have any cycles, once we map isometrically one face into $\R^2$, there is a unique way of mapping (unfolding) its complement face by face in such a way that when two faces share an edge not in $T$, then their images share the corresponding edge, and consecutive faces do not overlap. We are going to denote this map as $f_T$. This map restricted to the interior of $P_T$ is an isometric immersion into the plane. However, $f_T$ does not have to be injective (see figure \ref{Tet}). If it is, then we say it is a \textit{net} of $P$.
@@ -64,9 +65,7 @@ Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton,
 
 
 
-G.C. Shephard \cite{Sh} posed in 1975 the problem to determine whether all convex polyhedra have a net. The first known record of this procedure is the renaissance book \textit{The Painter's Manual} by Albert Durer \cite{Du}. In this book, Durer shows how to cut and develop some figures, including all five regular polyhedra. By that reason, Mohammad Ghomi \cite{Gh} calls it the Durer's problem.
-
-Experimental results do not give us enough information to expect a positive or negative answer to the problem. However, M. Ghomi solved a similar problem, which is to develop any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below). In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
+G.C. Shephard \cite{Sh} posed in 1975 the problem to determine whether all convex polyhedra have a net. Experimental results do not give us enough information to expect a positive or negative answer to the problem. However, Mohammad Ghomi solved a similar problem, which is to develop any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below). In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
 
 \begin{teorema}\label{Str}
 {\rm Let $P$ be a convex polyhedron, then there is a linear stretching $L$, such that $L(P)$ has a net.}
@@ -74,12 +73,12 @@ Experimental results do not give us enough information to expect a positive or n
 
 
 
-Let $\xi \in \mathbb{S}^2$ be a direction not orthogonal to any line determined by two vertices of $P$. Applying a rotation $O \in SO(3)$ sending $\xi $ to $e_1 $, we obtain a polyhedron $O(P)$ such that no edge is orthogonal to $e_1$. Therefore, after a suitable stretching in the direction of the $x$ axis, all the edges of the obtained polyhedron $P^{\prime}$  form an angle of less than $\frac{\pi}{20 N}$ with $e_1$, where $N$ is the number of edges of $P$.
+Let $\xi $ be a direction not orthogonal to any line determined by two vertices of $P$. Applying a rotation sending $\xi $ to $e_1 $, we obtain a polyhedron such that no edge is orthogonal to $e_1$. Therefore, after a suitable stretching in the direction of the $x$ axis, all the edges of the obtained polyhedron $P^{\prime}$  form an angle of less than $\frac{\pi}{20 N}$ with $e_1$, where $N$ is the number of edges of $P$.
 
 
 We now define an ordering on the set of vertices of $P^{\prime}$. We say that $v \leq v^{\prime}$ if the first coordinate of $v$ is less or equal than the first coordinate of $v^{\prime}$. We will denote by $y$ and $z$ the minimal and maximal vertices respectively.
 
-We define an \textit{ascending sequence} as a set of vertices $\{ p_0, p_1, \ldots , p_n   \}$ such that $p_i \leq p_{i+1}$ and $p_i p_{i+1}$ are connected by an edge for all $i \in \{ 0,1, \ldots, n-1 \} $. Descending sequences are defined similarly. We say that a spanning tree $T$ with root $z$ is \textit{increasing} if for any vertex $v\in P^{\prime}$ there is a (unique) ascending sequence from $v$ to $z$ contained in $T$. 
+We define an \textit{ascending sequence} as a set of vertices $\{ p_0, p_1, \ldots , p_n   \}$ such that $p_i \leq p_{i+1}$ and $p_i p_{i+1}$ are connected by an edge for all $i \in \{ 0,1, \ldots, n-1 \} $. We say that a spanning tree $T$ with root $z$ is \textit{increasing} if for any vertex $v\in P^{\prime}$ there is a (unique) ascending sequence from $v$ to $z$ contained in $T$. 
 
 Note that all leaves of an increasing tree form an angle close to $\pi$ with $e_1$. Otherwise, the path joining the corresponding leaf to $z$ wouldn't be an ascending sequence (see figure \ref{Mon}). Also, all the ends of the surface $P^{\prime} \backslash T$ point in the direction of the $x$ axis.
 
@@ -102,11 +101,11 @@ In what follows, we give a proof of theorem \ref{Gho} below, which clearly impli
 {\rm \textbf{(Ghomi)} If $P^{\prime}$ is cut along any increasing tree $T$, then it can be unfolded without overlapping in $\R ^2$.}
 \end{teorema}
 
+\section*{Proof of Theorem \ref{Gho}}
 
+First, construct an unfolding $f_T$ of $P^{\prime}_T$ in which the images of all the edges are almost horizontal (they form an angle less than $\frac{\pi}{10}$ with $e_1 \in \R ^2$). Next, we are going to prove that $f_T(\partial P^{\prime}_T)$ does not self intersect.
 
-First, construct an unfolding $f_T$ of $P^{\prime}_T$ in which the images of all the edges form an angle less than $\frac{\pi}{10}$ with $e_1 \in \R ^2$. Next, we are going to prove that $f_T(\partial P^{\prime}_T)$ does not self intersect.
-
-Consider $y^{\prime} = f_T(y) \in \R ^2$. Then, starting at $y^{\prime}$, the counterclockwise image of $\partial P^{\prime}_T$ is a sequence of piecewise linear curves (PLC's) going in the direction of the $x$ axis and backwards, alternately. We are going to denote the first PLC going right as $R_1$, the first one going left as $L_1$, and so on. Since $T$ is ascending, when we switch from going rightwards to leftwards, we rotate counterclockwise and when we switch from going leftwards to rightwards, we rotate clockwise (see figure \ref{Cro}). 
+Consider $y^{\prime} = f_T(y) \in \R ^2$. Then, starting at $y^{\prime}$, the counterclockwise image of $\partial P^{\prime}_T$ is a sequence of piecewise linear curves (broken lines) going in the direction of the $x$ axis and backwards, alternately. We are going to denote the first broken line going right as $R_1$, the first one going left as $L_1$, and so on. Since $T$ is ascending, when we switch from going rightwards to leftwards, we rotate counterclockwise and when we switch from going leftwards to rightwards, we rotate clockwise (see figure \ref{Cro}). 
 
 
 
@@ -116,7 +115,7 @@ Consider $y^{\prime} = f_T(y) \in \R ^2$. Then, starting at $y^{\prime}$, the co
 \psfrag{B}{$2$}
 \psfrag{C}{$3$}
 \includegraphics[scale=0.7]{Bry.eps}
-\caption{The image of the boundary is a sequence of piecewise linear curves going rightwards and leftwards alternately.}\label{Cro}
+\caption{The image of the boundary is a sequence of broken lines going rightwards and leftwards alternately.}\label{Cro}
 \end{figure}
 
 
@@ -129,34 +128,33 @@ Let $a, b, c$ be vertices such that $ab $ and $ac$ are connected by edges. We wi
 \measuredangle bac + \measuredangle  cab  < 2\pi.
 \end{equation} 
 
-For distinct $a,b,c \in \R^2$, $arg$ will denote the imaginary part of the principal branch of complex logarithm and $\angle bac $ will denote the angle at $a$ measured counterclockwise. We will say that two sequences of points in $\R ^2$ \textit{cross} if the PLC's determined by them do so. 
+For distinct $x,y,z \in \R^2$, $arg (x)$ will denote the argument from $-\pi$ to $\pi$ of $x$ as a complex number, and $\angle yxz $ will denote the angle at $x$ measured counterclockwise. We will say that two sequences of points in $\R ^2$ \textit{cross} if the broken line's determined by them do so. 
 
 
-\begin{lema} \label{Ant}
-{\rm Suppose $\{ u_0, u_1, \ldots , u_m     \}, \{ v_0, v_1, \ldots , v_m      \} \subset \R^2$ satisfy
+\begin{lema} \label{Arm}
+{\rm \textbf{(Arm Lemma)} Suppose $\{ u_0, u_1, \ldots , u_m     \}, \{ v_0, v_1, \ldots , v_m      \} \subset \R^2$ satisfy
 \begin{itemize}
 \item $u_0 = v_0$.
 \item $\vert u_j - u_{j-1} \vert = \vert v_j - v_{j-1}  \vert$ for $j=1,2, \ldots, m$.
-\item $arg(u_{j }- u_{j-1}), arg(v_j - v_{j-1} )  \in \left( -\frac{\pi}{10},\frac{\pi}{10} \right)$ for $j = 1, 2, \ldots , m$.
+\item $u_{j }- u_{j-1} $ and $v_j - v_{j-1} $ are almost horizontal for $j = 1, 2, \ldots , m$ (their argument is in $\left( -\frac{\pi}{10},\frac{\pi}{10} \right)$ ).
 \item $arg (v_{i} - v_{i-1} )\geq arg (u_{i} - u_{i-1})$ for $i \in \{ 1, 2, \ldots, m \} $.
 \end{itemize}
 
-Then $\{ u_0, u_1, \ldots , u_m     \}$ and $ \{ v_0, v_1, \ldots , v_m      \}$ do not cross and  \\
-$arg(u_m - v_m) \in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$.
+Then $\{ u_0, u_1, \ldots , u_m     \}$ and $ \{ v_0, v_1, \ldots , v_m      \}$ do not cross and $v_m - u_m$ is almost vertical (its argument lies in the interval $\left(  \frac{\pi}{2} - \frac{\pi}{10} , \frac{\pi}{2} + \frac{\pi}{10}  \right)$ ) 
 }
 \end{lema}
 
 
 
 \begin{rem}
-{\rm One can observe from figure \ref{Tet} that this lemma does not hold if the condition $arg(u_{j }- u_{j-1}), arg(v_j - v_{j-1} )  \in \left( -\frac{\pi}{10},\frac{\pi}{10} \right)$ for $j \in \{ 1, 2, \ldots , m\} $ is omitted. Here is where we use the stretching. 
+{\rm One can observe from figure \ref{Tet} that this lemma does not hold if  we remove the condition of $u_{j }- u_{j-1}$ and $ v_j - v_{j-1} $ being almost horizontal. Here is where we use the stretching. 
 }
 \end{rem}
 
 
 
 
-\textbf{Proof of the Lemma: }We will prove this lemma by induction on $m$. The case $m=1$ is elementary plane geometry.
+\textbf{Proof of the lemma: }We will prove this lemma by induction on $m$. The case $m=1$ is elementary plane geometry.
 
 
 Suppose it holds for $m=\nu$ and take $m = \nu +1$. Construct another sequence $\{ w_1, w_2, \ldots, w_m   \}$ such that $w_1 = v_1$ and $u_{j+1}u_jw_jw_{j+1} $ is a parallelogram for $j \in \{ 1, 2, \ldots , m-1\} $. Applying the induction hypothesis to $\{ w_1, w_2, \ldots w_m   \}$ and $\{v_1, v_2, \ldots, v_m  \}$, we see that they do not cross and $arg( w_{m} - v_m) \in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$. Also, $arg(u_m - w_m )= arg (u_1 - w_1) = arg (u_1 - v_1) \in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$, which implies $arg(u_m - v_m)\in \left( - \frac{6 \pi}{10} , -\frac{4\pi}{10}  \right)$.
@@ -179,7 +177,7 @@ Suppose it holds for $m=\nu$ and take $m = \nu +1$. Construct another sequence $
 \psfrag{K}{$w_3$}
 \psfrag{L}{$w_4$}
 \includegraphics[scale=0.95]{arms.eps}
-\caption{Proof of Lemma \ref{Ant}.}
+\caption{Proof of arm lemma.}
 \end{figure}
 
 
@@ -187,8 +185,8 @@ Suppose it holds for $m=\nu$ and take $m = \nu +1$. Construct another sequence $
 
 
 \begin{prop}\label{Zig}
-{\rm As defined above, if the sequence of PLC's $L_1R_2\ldots$ 
-$ L_n$ does not self intersect, then $L_1 R_2 \ldots L_nR_{n+1}$ won't self intersect either.  
+{\rm As defined above, if the sequence of broken lines $R_1L_1R_2\ldots$ 
+$ L_n$ does not self intersect, then $R_1L_1 R_2 \ldots L_nR_{n+1}$ won't self intersect either.  
 
 }
 \end{prop}
@@ -196,13 +194,13 @@ $ L_n$ does not self intersect, then $L_1 R_2 \ldots L_nR_{n+1}$ won't self inte
 
 
 
-\textbf{Proof: }The proof goes by induction on the number $n$ of times it has gone leftwards (in figure \ref{Cro}, $n=3$). For the case $n=1$, observe that the condition $arg (v_{i} - v_{i-1} )\geq arg (u_{i} - u_{i-1})$ for $i =1, 2, \ldots, m$ in Lemma \ref{Ant} is implied by $arg (v_1 - v_0 )\geq arg (u_1 - u_0)$ and $\angle v_{i+1}v_iv_{i-1}+ \angle u_{i-1}u_iu_{i+1} \leq 2\pi$ for $i\in \{ 1,2, \ldots, m-1\}$. Therefore Lemma \ref{Ant} completes the base of induction.
+\textbf{Proof: }The proof goes by induction on the number $n$ of times it has gone leftwards (in figure \ref{Cro}, $n=3$). For the case $n=1$, observe that the condition $arg (v_{i} - v_{i-1} )\geq arg (u_{i} - u_{i-1})$ for $i =1, 2, \ldots, m$ in the arm lemma is implied by $arg (v_1 - v_0 )\geq arg (u_1 - u_0)$ and $\angle v_{i+1}v_iv_{i-1}+ \angle u_{i-1}u_iu_{i+1} \leq 2\pi$ for $i\in \{ 1,2, \ldots, m-1\}$. Therefore the arm lemma completes the base of induction.
 
 Suppose the assertion is true for $n \leq k$ and consider the case $n=k+1$.  Note that the edges of $\partial P^{\prime}_T$ are paired in such a way that we glue paired edges together to obtain $P^{\prime}$ from $P ^{\prime}_T$. Each one will be called the \textit{dual} of the other.
 
-Observe that when we start $R_2$, we are traveling the dual edges of the leftmost part of $L_1$. If the length of $R_2$ is greater than or equal to the length of $L_1$, we can apply the induction hypothesis to $L_2R_3 \ldots L_nR_{n+1}$ and the result will follow. 
+Observe that when we start $R_2$, we are traveling the dual edges of the leftmost part of $L_1$. If the length of $R_2$ is greater than or equal to the length of $L_1$, we can apply the induction hypothesis to $R_2L_2R_3 \ldots L_nR_{n+1}$ and the result will follow. 
 
-If the length of $R_2$ is less than the length of $L_1$, we extend $R_2 $ with a PLC $S$ parallel to $L_1$ minus the dual of $R_2$. By Lemma \ref{Ant}, $S$ will be above $L_1$ (see figure \ref{S}), and by the induction hypothesis $S$ does not touch $L_2R_3 \ldots L_nR_{n+1}$ so this finishes the proof of proposition \ref{Zig}.
+If the length of $R_2$ is less than the length of $L_1$, we extend $R_2 $ with a broken line $S$ parallel to $L_1$ minus the dual of $R_2$. By the arm lemma, $S$ will be above $L_1$ (see figure \ref{S}), and by the induction hypothesis $S$ does not touch $L_2R_3 \ldots L_nR_{n+1}$ so this finishes the proof of proposition \ref{Zig}.
 
 \hfill $\Box$
 
@@ -217,7 +215,7 @@ If the length of $R_2$ is less than the length of $L_1$, we extend $R_2 $ with a
 
 
 
-Now, the image of $\partial  P^{\prime}_T$ will self intersect for the first time in a point $y^{\prime\prime}$ while going leftwards. Because $T$ is increasing, $f_T(\partial P_T^{\prime})$ contains a simple closed curve $\gamma$ starting at $y^{\prime \prime}$ consisting of a sequence of PLC's turning clockwise when changing from going leftwards to rightwards and counterclockwise in the other case.
+Now, the image of $\partial  P^{\prime}_T$ will self intersect for the first time in a point $y^{\prime\prime}$ while going leftwards. Because $T$ is increasing, $f_T(\partial P_T^{\prime})$ contains a simple closed curve $\gamma$ starting at $y^{\prime \prime}$ consisting of a sequence of broken lines turning clockwise when changing from going leftwards to rightwards and counterclockwise in the other case.
 
 
 
