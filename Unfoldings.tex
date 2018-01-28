@@ -36,7 +36,7 @@ Penn State University
 
 
 \begin{abstract}
-\noindent Here we give a short proof of a result obtained by Mohammad Ghomi concerning existence of nets of a convex polyhedron after a suitable linear transformation.
+\noindent We give a short proof of a result obtained by Mohammad Ghomi concerning existence of nets of a convex polyhedron after a suitable linear transformation.
 
 \end{abstract}
 
@@ -44,8 +44,31 @@ Penn State University
 \section*{Introduction}
 
 
-Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton, we obtain a compact surface $P_T$, which is homeomorphic to a closed disc. Since $P_T$ does not have any cycles, once we map isometrically one face into $\R^2$, there is a unique way of mapping (unfolding) its complement face by face in such a way that when two faces share an edge not in $T$, then their images share the corresponding edge, and consecutive faces do not overlap. We are going to denote this map as $f_T$. This map restricted to the interior of $P_T$ is an isometric immersion into the plane. However, $f_T$ does not have to be injective (see figure \ref{Tet}). If it is, then we say it is a \textit{net} of $P$.
+A \textit{net of a polyhedron} is an arrangement of edge-joined polygons in the plane which can be folded along its edges to become the faces of the polyhedron. The first known record of this procedure is the renaissance book \textit{The Painter's Manual} by Albert Durer \cite{Du}. In this book, Durer shows how to cut and develop some figures, including all five regular polyhedra.  
 
+
+%% Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton, we obtain a compact surface $P_T$, which is homeomorphic to a closed disc. Since $P_T$ does not have any cycles, once we map isometrically one face into $\R^2$, there is a unique way of mapping (unfolding) its complement face by face in such a way that when two faces share an edge not in $T$, then their images share the corresponding edge, and consecutive faces do not overlap. We are going to denote this map as $f_T$. This map restricted to the interior of $P_T$ is an isometric immersion into the plane. However, $f_T$ does not have to be injective (see figure \ref{Tet}). If it is, then we say it is a \textit{net} of $P$.
+
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{Durer.eps}
+\caption{Albert Durer self portrait.}
+\end{figure}
+
+
+
+In 1975 Geoffrey Shephard \cite{Sh} posed the problem to determine whether all convex polyhedra have a net. Let us discuss this problem in more detail. 
+
+
+
+To obtain a net one has to cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton. This way we obtain a flat surface $P_T$, which is homeomorphic to a closed disc. The surface $P_T$ can be mapped isometrically face by face into the plane in an essentially unique way; denote this map by $f_T\colon P_T\to \mathbb{R}^2$. 
+
+
+If $f_T$ is injective then the image $f_T(P_T)$ is a net of $P$. However $f_T$ might not be injective as figure \ref{Tet} shows. Therefore Shephard's problem is asking if for any convex polyhedron $P$ there is a spanning tree $T$ such that $f_T$ is injective.
 
 
 
@@ -61,37 +84,31 @@ Once we cut a convex polyhedron $P$ along a spanning tree $T$ of its 1-skeleton,
 
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.2]{Durer.eps}
-\caption{Albert Durer self portrait.}
-\end{figure}
 
 
 
 
 
 
+%  G.C. Shephard \cite{Sh} posed in 1975 the problem to determine whether all convex polyhedra have a net. Experimental results do not give us enough information to expect a positive or negative answer to the problem. However, Mohammad Ghomi solved a similar problem, which is to develop any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below). In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
 
 
+Recently Mohammad Ghomi \cite{Gh} proved the existence of a net for any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below). In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
 
-
-G.C. Shephard \cite{Sh} posed in 1975 the problem to determine whether all convex polyhedra have a net. Experimental results do not give us enough information to expect a positive or negative answer to the problem. However, Mohammad Ghomi solved a similar problem, which is to develop any polyhedron after a suitable stretching in one direction (theorem \ref{Str} below). In particular, every polyhedron is affinely equivalent to one with a net, and having a net does not depend on the combinatorial structure of the polyhedron. 
 
 \begin{teorema}\label{Str}
 {\rm Let $P$ be a convex polyhedron, then there is a linear stretching $L$, such that $L(P)$ has a net.}
 \end{teorema}
 
 
-
-Let $\xi $ be a direction not orthogonal to any line determined by two vertices of $P$. Applying a rotation sending $\xi $ to $e_1 $, we obtain a polyhedron such that no edge is orthogonal to $e_1$. Therefore, after a suitable stretching in the direction of the $x$ axis, all the edges of the obtained polyhedron $Q$  form an angle of less than $\frac{\pi}{20 N}$ with $e_1$, where $N$ is the number of edges of $P$.
+Let $\xi $ be a direction not orthogonal to any line determined by two vertices of $P$. Applying a rotation sending $\xi $ to $e_1 $, we obtain a polyhedron such that no edge is orthogonal to $e_1$. Therefore, after a suitable stretching in the direction of the $x$ axis, all the edges of the obtained polyhedron $Q$  form a sufficiently small angle with $e_1$ (less than $\frac{\pi}{20 N}$ will do, where $N$ is the number of edges of $P$).
 
 
 We now define an ordering on the set of vertices of $Q$. We say that $v \leq v^{\prime}$ if the first coordinate of $v$ is less or equal than the first coordinate of $v^{\prime}$. We will denote by $y$ and $z$ the minimal and maximal vertices respectively.
 
 We define an \textit{ascending sequence} as a set of vertices $\{ p_0, p_1, \ldots , p_n   \}$ such that $p_i \leq p_{i+1}$ and $p_i p_{i+1}$ are connected by an edge for all $i \in \{ 0,1, \ldots, n-1 \} $. We say that a spanning tree $T$ with root $z$ is \textit{increasing} if for any vertex $v\in Q$ there is a (unique) ascending sequence from $v$ to $z$ contained in $T$. 
 
-Note that all leaves of an increasing tree form an angle close to $\pi$ with $e_1$. Otherwise, the path in $T$ joining the corresponding leaf to $z$ wouldn't be an ascending sequence (see figure \ref{Mon}). Also, all the ends of the surface $Q \backslash T$ point in the direction of the $x$ axis.
+Note that all terminal edges of an increasing tree form an angle close to $\pi$ with $e_1$. Otherwise, the path in $T$ joining the corresponding leaf to $z$ wouldn't be an ascending sequence (see figure \ref{Mon}). Also, all the ends of the surface $Q \backslash T$ point in the direction of the $x$ axis.
 
 
 
@@ -99,21 +116,24 @@ Note that all leaves of an increasing tree form an angle close to $\pi$ with $e_
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.84]{Mono2.eps}
-\caption{Leaves of an increasing tree point leftwards and ends of its complement point rightwards.}\label{Mon}
+\caption{Terminal edges of an increasing tree $T$ point leftwards and ends of $Q \backslash T$ point rightwards.}\label{Mon}
 \end{figure}
 
-
-
-In what follows, we give a proof of theorem \ref{Gho} below, which clearly implies theorem \ref{Str}. 
+%In what follows, we give a proof of theorem \ref{Gho} below, which clearly implies theorem \ref{Str}. 
 
 
 
 \begin{teorema}\label{Gho}
-{\rm \textbf{(Ghomi)} If $Q$ is cut along any increasing tree $T$, then it can be unfolded without overlapping in $\R ^2$.}
+{\rm \textbf{(Ghomi)} If $Q$ is cut along any increasing tree $T$, then the unfolding map $f_T$ is injective.}
 \end{teorema}
 
 
+
+In this note we give a short and elementary proof this theorem, which clearly implies theorem \ref{Str}. 
+
+
 \section*{Preliminaries}
+
 
 
 
@@ -142,7 +162,7 @@ Then $\{ u_0, u_1, \ldots , u_m     \}$ and $ \{ v_0, v_1, \ldots , v_m      \}$
 
 
 \begin{rem}
-{\rm One can observe from figure \ref{Tet} that this lemma does not hold if  we remove the condition of $u_{j }- u_{j-1}$ and $ v_j - v_{j-1} $ being almost horizontal. Here is where we use the stretching. 
+{\rm One can observe from figure \ref{Tet} that this lemma does not hold if  we remove the condition of $u_{j }- u_{j-1}$ and $ v_j - v_{j-1} $ being almost horizontal. The stretching is applied to meet this condition. 
 }
 \end{rem}
 
